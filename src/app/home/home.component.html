@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  
+
+  <div class="row">
+    <div class="col-lg-12 container-fluid " id="image1">
+      <img class="float_left" [src]=img1>
+
+
+    </div>
+    <div class="container-fluid col-lg-12 col-lg-offset-4 jumbotron-fluid" id="intro">
+      <h1 style="color: white; font-size:75px; ">
+        YOUR REAL ESTATE <br> PARTNER, MOHITE REALTY
+      </h1> <br>
+      <p style="color: white; font-size: 20px;">Welcome to Commercial Property Consultancy</p>
+    </div>
+  </div>
+  <div class="container-fluid col-lg-4 col-lg-offset-4" id="div2">
+    <h3 id="prop">PROPERTIES AVAILABLE</h3>
+    <br><br>
+
+    <h5>******* Buy. Sell. Rent. Invest. ******</h5>
+
+  </div>
+  <div class="row ">
+
+    <div class="col-lg-4" id="image2" style="padding: 0px;">
+      <img class="float_left " [src]=img2 style="height: 550px;">
+
+
+    </div>
+    <div class="col-lg-4" id="image3" style="padding: 0px;">
+      <img class="float_left" [src]=img1 style="height: 550px;">
+
+    </div>
+    <div class=" col-lg-4" id="image4" style="padding: 0px;">
+      <img class="float_left" [src]=img2 style="height: 550px;">
+
+    </div>
+    <div class="container-fluid col-lg-12 col-lg-offset-4 jumbotron-fluid" id="jumbo2">
+      <div class="row">
+        <div class="col-lg-4 text-center">
+          <h5 style="text-align: center; color: white;">PURCHASE <br><br>
+            Shops, Showrooms & Offices</h5> <br>
+          <a class="btn btn-primary" href="#" role="button" style="text-align: right;">Properties</a>
+        </div>
+        <div class="col-lg-4 text-center">
+          <h5 style="text-align: center; color: white;">RENTALS <br> <br>
+            Shops, Showrooms & Offices</h5> <br>
+          <a class="btn btn-primary" href="#" role="button">Shop</a> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a class="btn btn-primary" href="#" role="button">Office</a>
+
+        </div>
+        <div class="col-lg-4 text-center">
+          <h5 style="text-align: center; color: white;"> LANDS <br> <br>
+            Plots, Joint Ventures & Lease</h5> <br>
+          <a class="btn btn-primary " href="#" role="button">Properties</a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="row" style="padding-top: 80px; margin-bottom: 30px;">
+    <div class="col-lg-6">
+      <h3 style="text-align: center; color: rgb(1, 1, 44);">GET IN TOUCH</h3>
+      <br>
+      <p style="text-align: center;"> <b>Address :</b> Mohite Realty, 5th Floor, Raj Towers, <br> Near Shivaji Maharaj
+        Statue, Kothrud Pune - 411038</p>
+      <br>
+      <p style="text-align: center;"> dhananjaynmohite@gmail.com</p>
+      <br>
+      <p style="text-align: center;"> Dhananjay Mohite - 09011071657</p>
+    </div>
+    <div class="col-lg-6">
+
+      <form #userForm="ngForm" (ngSubmit)="userForm.form.valid && doSubmitForm()">
+        <div class="form-group">
+          <input type="text" required name="name" [(ngModel)]="data.name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
+          placeholder="Name" ngModel #name="ngModel" pattern="[a-zA-Z ]*">
+          <span class="error" *ngIf=" userForm.submitted && name.errors?.required || name.invalid && name.touched">Name is required</span>
+          
+          <span class="error" *ngIf=" userForm.submitted && name.errors?.pattern"> Invalid Name</span>
+
+        </div>
+        <div class="form-group">
+          <input type="email" required name="email" [(ngModel)]="data.email"  class="form-control" id="exampleInputPassword1" 
+          placeholder="Email" #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+          <span class="error"*ngIf="userForm.submitted && email.errors?.required || email.invalid && email.touched">Email is reuired</span>
+          <span class="error" *ngIf=" userForm.submitted && email.errors?.pattern"> Invalid Email</span>
+        </div>
+        <div class="form-group">
+          <input type="text" required name="phone" [(ngModel)]="data.phone"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Phone" #phone="ngModel" pattern="[0-9]*" maxlength="10">
+            <span class="error" *ngIf="userForm.submitted && phone.errors?.required || phone.invalid && phone.touched">Phone is required</span>
+            <span class="error" *ngIf=" userForm.submitted && phone.errors?.pattern"> Invalid Phone</span>
+          </div>
+        <div class="form-group">
+          <input type="text" required name="req" [(ngModel)]="data.req"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Requirenment" #req="ngModel" >
+            <span class="error" *ngIf="userForm.submitted && req.errors?.required || req.invalid && req.touched">Requirenment is required</span>
+           </div>
+        <div class="form-group">
+
+          <textarea name="msg" required [(ngModel)]="data.msg"  class="form-control" id="exampleFormControlTextarea1" rows="3"
+            placeholder="Type your Message here..." #msg="ngModel"></textarea>
+            <span class="error" *ngIf="userForm.submitted && req.errors?.required || msg.invalid && msg.touched">Message is required</span>
+          </div>
+        <button type="submit" class="btn btn-secondary btn-lg btn-block">Submit</button>
+      </form>
+      {{ data | json }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 container-fluid" id="image4">
+      <img class="float_left" [src]=img3>
+
+    </div>
+  </div>
+  <div class="row" style="margin-top: 150px;">
+    <div class="container-fluid col-lg-4 col-lg-offset-4">
+      <p style="text-align: center;">Dhananjay Mohite - 09011071657</p>
+      <br>
+
+      <p style="text-align: center;">©2020 by Mohite Realty.</p>
+
+    </div>
+  </div>
+
+
+</body>
+
+</html>
+<router-outlet></router-outlet>

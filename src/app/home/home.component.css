@@ -1,0 +1,80 @@
+#nav1{
+    background-color: white;
+    margin-top: 150px;
+}
+
+#navbarSupportedContent{
+    margin-left: 600px;
+    margin-top: -55px;
+    background-color: white;
+}
+#div2{
+    background-color: white(148, 13, 13);
+    margin-top: 190px;
+    margin-bottom: 40px;
+    width: 100%;
+   height: 100px;
+}
+#prop{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(9, 1, 80);
+    font-style: bold bold;
+    font-size: 30px;
+}
+
+
+#head{
+    background-color: white;
+    margin-bottom: -10px;
+    margin-right: -17px;
+     margin-left: -17px;
+     margin-top: -8px;
+     height: 100px;
+    
+    width: 170%;
+}
+
+
+#cname{
+    margin-left: 5%;
+    margin-top: 20px;
+    width: 20%;
+    background-color: white;
+}
+#image1{
+    height: 600px;
+    width: 100%;
+    margin-top: 10px;
+   
+    
+}
+
+
+.float_left{
+    height: 600px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+
+  .affix + .container-fluid {
+    padding-top: 20px;
+  }
+   #intro{
+       
+      margin-top: -250px;
+      margin-left: 300px;
+       width: 100%;
+   }
+   #jumbo2{
+       margin-top: -240px;
+       
+   }
+   .error{
+       color: red;
+   }
